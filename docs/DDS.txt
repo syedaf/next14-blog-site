@@ -1,0 +1,127 @@
+	1. Set up project configuration
+	
+		○ Set up Dependencies
+			§ New Project
+				□  run 'npm i'
+			§ Existing Project 
+				□ copy package.json and package-lock.json
+				□ run 'npm ci'
+			
+		○ Set up Configuration files - jsconfig.json, next.config.js, etc.
+			§ jsconfig.json - JavaScript configuration (path aliases)
+			§ next.config.js - Next.js configuration
+			§ .eslintrc.json - ESLint rules
+			§ package.json - Project dependencies and scripts
+			
+	2. Define data models
+	
+		○ Create models.js with User and Post schemas 
+			§ src/lib/models.js
+		
+	3. Create utility functions
+	
+		○ Build database connection in utils.js
+			§ src/lib/utils.js
+		○ Create data fetching functions in data.js
+			§ src/lib/data.js
+		
+	4. Configure authentication
+		
+		○ Set up auth.config.js and middleware.js
+			§ src/lib/auth.config.js - NextAuth configuration
+			§ src/middleware.js - Route protection middleware
+		
+	5. Implement business logic
+	
+		○ Create authentication logic in auth.js
+			§ src/lib/auth.js - NextAuth implementation with providers
+		○ Implement server actions in action.js
+			§ src/lib/action.js - Form submission handlers and data mutations
+		○ Set up API routes
+			§ src/app/api/blog/route.js - Blog listing API
+			§ src/app/api/blog/[slug]/route.js - Single blog post API
+			§ src/app/api/auth/[...nextauth]/route.js - Authentication API
+			
+	6. Create special pages
+		
+		○ Implement not-found.jsx, error.jsx, loading.jsx
+			§ src/app/not-found.jsx - Custom 404 page
+			§ src/app/loading.jsx - Loading state for routes
+			§ src/app/error.jsx - Error handling for routes
+		
+	7. Build layouts and navigation
+		
+		○ Create root layout.js and global styles
+			§ src/app/layout.js - Root layout
+			§ src/app/(auth)/layout.js - Authentication layout
+			§ src/app/globals.css - Global styles
+			
+		○ Build Navbar and Footer components
+			§ src/components/navbar/Navbar.jsx - Main navigation
+			§ src/components/navbar/navbar.module.css - Navbar styles
+			§ src/components/navbar/links/Links.jsx - Navigation links
+			§ src/components/navbar/links/links.module.css - Links styles
+			§ src/components/navbar/links/navLink/navLink.jsx - Individual link
+			§ src/components/navbar/links/navLink/navLink.module.css - NavLink styles
+			§ src/components/footer/Footer.jsx - Site footer
+			§ src/components/footer/footer.module.css - Footer styles
+			
+	8. Implement authentication UI
+	
+		○ Create auth layout and login/register pages
+		○ Build login and registration forms
+			§ src/app/(auth)/login/page.jsx - Login page
+			§ src/app/(auth)/login/login.module.css - Login page styles
+			§ src/app/(auth)/register/page.jsx - Registration page
+			§ src/app/(auth)/register/register.module.css - Registration page styles
+			§ src/components/loginForm/loginForm.jsx - Login form component
+			§ src/components/loginForm/loginForm.module.css - Login form styles
+			§ src/components/registerForm/registerForm.jsx - Registration form
+			§ src/components/registerForm/registerForm.module.css - Registration form styles
+	
+	9. Build basic pages
+		
+		○ Implement Home, About, and Contact pages
+			§ src/app/page.jsx - Home page
+			§ src/app/home.module.css - Home page styles
+			§ src/app/about/page.jsx - About page
+			§ src/app/about/about.module.css - About page styles
+			§ src/app/contact/page.jsx - Contact page
+			§ src/app/contact/contact.module.css - Contact page styles
+			
+	10. Create blog functionality
+	
+		○ Build blog listing and individual post pages
+		○ Create PostCard and PostUser components
+			§ src/app/blog/page.jsx - Blog listing page
+			§ src/app/blog/blog.module.css - Blog page styles
+			§ src/app/blog/[slug]/page.jsx - Individual blog post page
+			§ src/app/blog/[slug]/singlePost.module.css - Single post page styles
+			§ src/components/postCard/postCard.jsx - Blog post preview
+			§ src/components/postCard/postCard.module.css - Post card styles
+			§ src/components/postUser/postUser.jsx - Post author component
+			§ src/components/postUser/postUser.module.css - Post user styles
+			
+	11. Implement admin dashboard
+		
+		○ Create admin page and management components
+		○ Build forms for creating posts and users
+			§ src/app/admin/page.jsx - Admin dashboard
+			§ src/app/admin/admin.module.css - Admin page styles
+			§ src/components/adminPosts/adminPosts.jsx - Post management
+			§ src/components/adminPosts/adminPosts.module.css - Admin posts styles
+			§ src/components/adminUsers/adminUsers.jsx - User management
+			§ src/components/adminUsers/adminUsers.module.css - Admin users styles
+			§ src/components/adminPostForm/adminPostForm.jsx - Post creation form
+			§ src/components/adminPostForm/adminPostForm.module.css - Post form styles
+			§ src/components/adminUserForm/adminUserForm.jsx - User creation form
+			§ src/components/adminUserForm/adminUserForm.module.css - User form styles
+			
+	12. Implement Testing/Navigation Components
+
+		○ Build the testing pages
+			§ src/app/navigationtest/page.jsx - Navigation testing page
+			§ src/app/serveractiontest/page.jsx - Server action testing page
+			§ src/components/hydrationTest.jsx - Hydration testing component
+			§ src/components/clientSideProviderTest.jsx - Client provider test
+		

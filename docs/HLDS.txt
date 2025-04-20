@@ -1,0 +1,51 @@
+	1. Set up project configuration
+	
+		a. Set up Dependencies
+		b. Set up Configuration files - jsconfig.json, next.config.js, etc.
+		
+	2. Define data models
+	
+		○ Create models.js with User and Post schemas
+		
+	3. Create utility functions
+	
+		○ Build database connection in utils.js
+		○ Create data fetching functions in data.js
+		
+	4. Configure authentication
+		
+		○ Set up auth.config.js and middleware.js
+		
+	5. Implement business logic
+	
+		○ Create authentication logic in auth.js
+		○ Implement server actions in action.js
+		○ Set up API routes
+		
+	6. Create special pages
+		
+		○ Implement not-found.jsx, error.jsx, loading.jsx
+		
+	7. Build layouts and navigation
+		
+		○ Create root layout.js and global styles
+		○ Build Navbar and Footer components
+	
+	8. Implement authentication UI
+	
+		○ Create auth layout and login/register pages
+		○ Build login and registration forms
+	
+	9. Build basic pages
+		
+		○ Implement Home, About, and Contact pages
+		
+	10. Create blog functionality
+	
+		○ Build blog listing and individual post pages
+		○ Create PostCard and PostUser components
+		
+	11. Implement admin dashboard
+		
+		○ Create admin page and management components
+		○ Build forms for creating posts and users
