@@ -27,12 +27,12 @@ const links = [
 ];
 
 // eslint-disable-next-line no-unused-vars
-const Links = ({ session }) => {
-  const [open, setOpen] = useState(true);
+const Links = () => {
+  const [open, setOpen] = useState(false);
 
   // TEMPORARY
-  // const session = true;
-  // const isAdmin = true;
+  const session = true;
+  const isAdmin = true;
 
   return (
     <div className={styles.container}>
@@ -40,8 +40,14 @@ const Links = ({ session }) => {
         {links.map((link) => (
           <NavLink item={link} key={link.title} />
         ))}
-
-        <NavLink item={{ title: "Login", path: "/login" }} />
+        {session ? (
+          <>
+            {isAdmin && <NavLink item={{ title: "Admin", path: "/admin" }} />}
+            <button className={styles.logout}>Logout</button>
+          </>
+        ) : (
+          <NavLink item={{ title: "Login", path: "/login" }} />
+        )}
       </div>
       <Image
         className={styles.menuButton}
